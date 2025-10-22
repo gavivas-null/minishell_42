@@ -1,7 +1,7 @@
 #ifdef MINISHELL_H
 # define MINISHELL_H
 
-//---------------------------LIBS---------------------------
+//-------------------------------------LIBS-------------------------------------
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -12,5 +12,7 @@
 # include <term.h>
 # include <termios.h>
 # include <sys/ioctl.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 
 #endif
