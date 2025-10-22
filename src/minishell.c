@@ -1,30 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/22 19:46:39 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/10/22 19:48:33 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef MINISHELL_H
-# define MINISHELL_H
+#include <minishell.h>
 
-//-------------------------------------LIBS-------------------------------------
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <sys/wait.h>
-# include <signal.h>
-# include <sys/stat.h>
-# include <dirent.h>
-# include <term.h>
-# include <termios.h>
-# include <sys/ioctl.h>
-# include <readline/readline.h>
-# include <readline/history.h>
-
-#endif
+int	main(int argc, char **args)
+{
+}
