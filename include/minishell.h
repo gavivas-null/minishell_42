@@ -6,25 +6,19 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/22 19:46:39 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/22 20:23:38 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef MINISHELL_H
+#ifndef MINISHELL_H
 # define MINISHELL_H
 
 //-------------------------------------LIBS-------------------------------------
-# include <unistd.h>
+
 # include <stdio.h>
+# include <unistd.h>
 # include <stdlib.h>
-# include <sys/wait.h>
-# include <signal.h>
-# include <sys/stat.h>
-# include <dirent.h>
-# include <term.h>
-# include <termios.h>
-# include <sys/ioctl.h>
-# include <readline/readline.h>
-# include <readline/history.h>
+# include <limits.h>
+# include <string.h>
 
 #endif
