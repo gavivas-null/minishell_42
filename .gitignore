@@ -1,0 +1,20 @@
+# Compilation Files
+*.o
+*.out
+*.a
+
+# Ejecutables
+a.out
+minishell
+pipex
+test
+
+# Tmp
+obj/
+build/
+bin/
+
+# Systems Files
+.DS_Store
+.vscode/
+*.log
