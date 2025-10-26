@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   readline.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 19:53:42 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/10/26 19:49:37 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/10/26 19:53:56 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <minishell.h>
 
-int	main(int argc, char **args)
+void	start_shell(void)
 {
-	(void)argc;
-	(void)args;
-	start_shell();
-	return (0);
+	char	*line;
+	int		running;
+
+	running = 1;
+	while (running)
+	{
+		line = readline("minishell> ");
+		if (line == NULL)
+			running = 0;
+		else if (line[0] == '\0')
+			continue ;
+		add_history(line);
+		free(line);
+	}
 }

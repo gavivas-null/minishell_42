@@ -7,7 +7,8 @@ INCLUDES = -I include
 SRC_DIR = src
 OBJ_DIR = obj
 TMP_DIR = tmp
-SRC = $(SRC_DIR)/minishell.c \
+SRC =	$(SRC_DIR)/minishell.c \
+		$(SRC_DIR)/readline.c \
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
@@ -21,7 +22,6 @@ $(OBJ_DIR):
 
 $(TMP_DIR):
 	@mkdir -p $(TMP_DIR)
-	@touch $(TMP_DIR)/minishell_history
 
 $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) -lreadline -o $(NAME)
