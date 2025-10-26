@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/06/05 18:53:45 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/06/05 21:34:13 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+char	*ft_strrev(char *str)
 {
-	t_mini	mini;
+	int		i;
+	int		j;
+	char	tmp;
 
-	start_shell(&mini);
-	return (0);
+	i = 0;
+	j = ft_strlen(str) - 1;
+	while (i < j)
+	{
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
+		i++;
+		j--;
+	}
+	return (str);
 }

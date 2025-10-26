@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_swap_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/06/05 18:53:49 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/06/05 21:36:58 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+void	ft_swap_int(int *a, int *b)
 {
-	t_mini	mini;
+	int	tmp;
 
-	start_shell(&mini);
-	return (0);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/06/02 21:59:32 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/06/02 22:00:32 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+int	ft_sqrt(int num)
 {
-	t_mini	mini;
+	int	i;
 
-	start_shell(&mini);
-	return (0);
+	if (num < 4)
+		return (1);
+	i = 2;
+	while (i * i <= num)
+		i++;
+	return (i - 1);
 }

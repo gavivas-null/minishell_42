@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:53:36 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:31 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	t_mini	mini;
+	char	*newstr;
+	size_t	len;
+	size_t	slen;
 
-	start_shell(&mini);
-	return (0);
+	len = ft_strlen(s1);
+	slen = ft_strlen(s2);
+	newstr = malloc(sizeof(char) * (len + slen + 1));
+	if (newstr == NULL)
+		return (NULL);
+	ft_memcpy(newstr, s1, len);
+	ft_memcpy(newstr + len, s2, slen + 1);
+	return (newstr);
 }

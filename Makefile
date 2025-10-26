@@ -2,29 +2,29 @@ NAME = minishell
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
-INCLUDES = -I include
+INCLUDES = -I include -I Libft
+LIBFT = Libft/libft.a
 
 SRC_DIR = src
 OBJ_DIR = obj
-TMP_DIR = tmp
 SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/readline.c \
+		$(SRC_DIR)/parser.c \
+		$(SRC_DIR)/lst_tokens.c \
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
 # --------------------------------------------------------------
 # 👇 Regla principal
 # --------------------------------------------------------------
-all: $(OBJ_DIR) $(TMP_DIR) $(NAME)
+all: $(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
-$(TMP_DIR):
-	@mkdir -p $(TMP_DIR)
-
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) -lreadline -o $(NAME)
+	@$(MAKE) -C Libft > /dev/null
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) -lreadline -o $(NAME)
 	@echo "✅ Proyecto compilado correctamente."
 
 # --------------------------------------------------------------
@@ -41,13 +41,14 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@rm -rf $(OBJ_DIR) > /dev/null
-	@rm -rf $(TMP_DIR) > /dev/null
+	@$(MAKE) -C Libft fclean > /dev/null
 	@echo "🧹 Archivos objeto y temporales eliminados."
 
 fclean: clean
 	@rm -f $(NAME) > /dev/null
+	@$(MAKE) -C Libft fclean > /dev/null
 	@echo "🧼 Todo limpio."
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re libft

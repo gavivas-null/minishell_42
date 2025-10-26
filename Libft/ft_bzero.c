@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:51:24 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:55:02 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	t_mini	mini;
-
-	start_shell(&mini);
-	return (0);
+	ft_memset(s, 0, n);
 }
+/*
+int	main()
+{
+	size_t  d = 10;
+	unsigned char f[30] = "hola buenas que tal";
+
+	printf("%s\n", f);
+	ft_bzero(f, d);
+	printf("%s\n", f);
+	return (0);
+}*/

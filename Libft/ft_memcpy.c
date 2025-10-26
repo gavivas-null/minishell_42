@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   readline.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 19:49:37 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:00 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:52:46 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:55:50 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-void	start_shell(t_mini *mini)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*line;
-	int		running;
+	size_t	i;
 
-	running = 1;
-	mini->data = NULL;
-	while (running)
+	i = 0;
+	if (src == NULL && dst == NULL && n)
+		return (NULL);
+	while (i < n)
 	{
-		line = readline("minishell> ");
-		if (line == NULL)
-			break ;
-		else if (line[0] == '\0')
-			continue ;
-		add_history(line);
-		read_tokens(mini, line);
-		// TODO: continue parsing and executor
-		free(line);
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		i++;
 	}
+	return (dst);
 }
+
+/* int	main(void)
+{
+	char src[] = "";
+	char dest[20];
+	size_t d = 5;
+
+	printf("%s\n", ft_memcpy(dest, src, d));
+	printf("%s", memcpy(dest,src, d));
+	return (0);
+} */

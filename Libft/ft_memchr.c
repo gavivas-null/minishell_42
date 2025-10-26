@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:52:40 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:55:46 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_mini	mini;
+	const unsigned char	*ptr;
 
-	start_shell(&mini);
-	return (0);
+	ptr = s;
+	while (n != 0)
+	{
+		if (*ptr == (unsigned char)c)
+		{
+			return ((void *)ptr);
+		}
+		ptr++;
+		n--;
+	}
+	return (NULL);
 }

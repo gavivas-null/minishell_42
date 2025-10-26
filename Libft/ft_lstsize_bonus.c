@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:52:37 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:55:44 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+int	ft_lstsize(t_list *lst)
 {
-	t_mini	mini;
+	t_list	*new;
+	int		count;
 
-	start_shell(&mini);
-	return (0);
+	count = 0;
+	new = lst;
+	while (new != NULL)
+	{
+		count++;
+		new = new->next;
+	}
+	return (count);
 }

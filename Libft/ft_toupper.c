@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:54:46 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:56 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}
+/*
 int	main(void)
 {
-	t_mini	mini;
+	char a = 'h';
 
-	start_shell(&mini);
-	return (0);
-}
+	printf("%c \n", ft_toupper(a));
+	printf("%c", toupper(a));
+	return (0); 
+}*/

@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_is_bit_set.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/05/31 21:43:42 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/06/01 20:00:09 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+int	is_bit_set(int index, int bit_position)
 {
-	t_mini	mini;
+	int	i;
+	int	result;
 
-	start_shell(&mini);
-	return (0);
+	i = 0;
+	while (i < bit_position)
+	{
+		index = index / 2;
+		i++;
+	}
+	result = index % 2;
+	return (result);
 }

@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:54:11 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:42 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	t_mini	mini;
+	char	*newstr;
+	size_t	len;
+	size_t	i;
 
-	start_shell(&mini);
-	return (0);
+	i = 0;
+	len = ft_strlen(s);
+	newstr = malloc(sizeof(char) * len + 1);
+	if (newstr == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		newstr[i] = f(i, s[i]);
+		i++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
 }

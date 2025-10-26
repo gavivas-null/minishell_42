@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:54:15 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:44 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	t_mini	mini;
+	size_t	i;
 
-	start_shell(&mini);
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (((unsigned char *)s1)[i] > ((unsigned char *)s2)[i])
+			return (1);
+		else if (((unsigned char *)s1)[i] < ((unsigned char *)s2)[i])
+			return (-1);
+		i++;
+	}
 	return (0);
 }

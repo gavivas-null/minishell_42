@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:53:53 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:40 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
+size_t	ft_strlen(const char *s)
+{
+	int	a;
+
+	a = 0;
+	while (s[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
+}
+/*
 int	main(void)
 {
-	t_mini	mini;
+	char	*len;
 
-	start_shell(&mini);
+	len = "Muy buenas a todos Guapisimos";
+
+	printf("%zu \n", ft_strlen(len));
+	printf("%zu", strlen(len));
 	return (0);
-}
+}*/

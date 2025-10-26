@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:52:53 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:03 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	t_mini	mini;
+	size_t	i;
 
-	start_shell(&mini);
-	return (0);
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *) b)[i] = c;
+		i++;
+	}
+	return (b);
 }
+/*
+int     main(void)
+{
+        int     c = 'f';
+        size_t  d = 10;
+        unsigned char f[30] = "muy buenas guapisimos";
+
+        printf("%s \n", ft_memset(f, c, d));
+        printf("%s", memset(f, c, d));
+        return (0);
+}*/

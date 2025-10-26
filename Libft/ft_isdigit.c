@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:51:44 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:55:23 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+int	ft_isdigit(int c)
 {
-	t_mini	mini;
-
-	start_shell(&mini);
-	return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
+/*
+int	main()
+{
+	printf("%d \n", ft_isdigit('s'));
+	printf("%d \n", isdigit('s'));
+	return (0);
+}*/

@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Created: 2024/08/19 18:54:29 by gavivas-          #+#    #+#             */
+/*   Updated: 2024/08/19 18:56:48 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "libft.h"
 
-int	main(void)
+char	*ft_strrchr(const char *s, int c)
 {
-	t_mini	mini;
+	int		a;
+	char	l;
 
-	start_shell(&mini);
-	return (0);
+	l = c;
+	a = ft_strlen(s);
+	while (a >= 0)
+	{
+		if (s[a] == l)
+			return ((char *)&s[a]);
+		a--;
+	}
+	return (NULL);
 }
+/*int	main(void)
+{ 
+	int c = 'u';
+	char s[50] = "Hola mundo";
+	
+	printf("%s \n", ft_strrchr(s, c));
+	//printf("%s", strrchr(s, c));
+	return (0);
+}*/
