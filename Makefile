@@ -9,7 +9,8 @@ SRC_DIR = src
 OBJ_DIR = obj
 SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/parser.c \
-		$(SRC_DIR)/lst_tokens.c \
+		$(SRC_DIR)/utils_tokens.c \
+		$(SRC_DIR)/utils_envp.c \
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
