@@ -6,13 +6,34 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/26 21:20:35 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:34:58 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <minishell.h>
 
-int	main(void)
+void	start_shell(t_mini *mini)
+{
+	char	*line;
+	int		running;
+
+	running = 1;
+	mini->data = NULL;
+	while (running)
+	{
+		line = readline("minishell> ");
+		if (line == NULL)
+			break ;
+		else if (line[0] == '\0')
+			continue ;
+		add_history(line);
+		read_tokens(mini, line);
+		// TODO: continue parsing and executor
+		free(line);
+	}
+}
+
+int	main(char **envp)
 {
 	t_mini	mini;
 

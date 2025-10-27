@@ -8,7 +8,6 @@ LIBFT = Libft/libft.a
 SRC_DIR = src
 OBJ_DIR = obj
 SRC =	$(SRC_DIR)/minishell.c \
-		$(SRC_DIR)/readline.c \
 		$(SRC_DIR)/parser.c \
 		$(SRC_DIR)/lst_tokens.c \
 
