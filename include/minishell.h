@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 20:23:33 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:10:43 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,8 @@ t_token	*create_token(char *content);
 t_token	*last_token(t_token *lst);
 void	add_token(t_token **lst, t_token *new);
 void	extract_envp(t_mini *mini, char **envp);
+void	env_add(t_envp **lst, t_envp *new);
+t_envp	*env_last(t_envp *lst);
+t_envp	*env_new(char *key, char *value);
 
 #endif

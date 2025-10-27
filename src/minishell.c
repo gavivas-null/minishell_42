@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 20:09:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:11:13 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char **args, char **envp)
 
 	(void)argc;
 	(void)args;
-	//start_shell(&mini);
 	extract_envp(&mini, envp);
+	//start_shell(&mini);
 	return (0);
 }
