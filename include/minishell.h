@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 20:07:27 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:23:33 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ typedef struct s_token
 
 typedef struct s_envp
 {
-	char			*value;
 	char			*key;
+	char			*value;
 	struct s_envp	*next;
 }	t_envp;
 
