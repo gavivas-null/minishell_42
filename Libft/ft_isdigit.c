@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:51:44 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:55:23 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:24 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-/*
-int	main()
-{
-	printf("%d \n", ft_isdigit('s'));
-	printf("%d \n", isdigit('s'));
-	return (0);
-}*/

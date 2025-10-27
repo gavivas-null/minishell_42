@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:53:25 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:23 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:48:45 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[a]);
 	return (NULL);
 }
-/*int	main(void)
-{ 
-	int c = 'm';
-	char s[20] = "Hola mundo";
-	
-	printf("%s \n", ft_strchr(s, c));
-	printf("%s", strchr(s, c));
-	return (0);
-}*/

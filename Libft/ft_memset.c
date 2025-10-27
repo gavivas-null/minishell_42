@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:52:53 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:03 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:48:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int     main(void)
-{
-        int     c = 'f';
-        size_t  d = 10;
-        unsigned char f[30] = "muy buenas guapisimos";
-
-        printf("%s \n", ft_memset(f, c, d));
-        printf("%s", memset(f, c, d));
-        return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:54:42 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:54 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:49:22 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-/*
-int	main(void)
-{
-	char a = 'U';
-
-	printf("%c \n", ft_tolower(a));
-	printf("%c", tolower(a));
-	return (0);
-}*/

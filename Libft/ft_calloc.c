@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:51:29 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/04/24 19:04:20 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:08 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(arr, totalsize);
 	return (arr);
 }
-
-/* int main()
-{
-	size_t count = SIZE_MAX;
-	size_t size = 5;
-
-	void *arr = ft_calloc(count, size);
-	if (arr == NULL)
-		printf("Error\n");
-	else
-		printf("Bien Chaval.\n");
-	if (arr != NULL)
-		free(arr);
-} */

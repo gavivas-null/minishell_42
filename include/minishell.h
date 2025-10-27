@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 19:29:01 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:46:27 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ typedef struct s_envp
 	char			*value;
 	char			*key;
 	struct s_envp	*next;
-	
 }	t_envp;
 
 typedef struct s_mini
@@ -58,6 +57,5 @@ void	read_tokens(t_mini *mini, char *line);
 t_token	*create_token(char *content);
 t_token	*last_token(t_token *lst);
 void	add_token(t_token **lst, t_token *new);
-
 
 #endif

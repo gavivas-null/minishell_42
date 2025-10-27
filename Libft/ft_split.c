@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:53:21 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 20:09:17 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:48:38 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,38 +77,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (new);
 }
-
-/* 
-int main(void)   //MAIN DE ft_countwords
-{
-    char *s = "asdg hoola c";
-    char c = ' ';
-
-    printf("%d \n", ft_limits(s, c));
-    return 0;
-} */
-/* int	main(void) //MAIN DE ft_copywords
-{
-    char	*s = "hola hi";
-    char	c = ' ';
-	int	i = 2;
-
-    printf(".%s.\n", ft_copywords(s, c, &i));
-	printf(".%s.\n", ft_copywords(s, c, &i));
-	return 0;
-} */
-/*
-int	main(void)
-{
-	char	*s = "Hola Mi Gente";
-	char	c = ' ';
- 	char **splitt = ft_split(s, c);
-
-	int i = 0;
-	while (splitt[i])
-	{
-		ft_putstr_fd(splitt[i], 1);
-		i++;
-	}
-	return 0;
-}*/

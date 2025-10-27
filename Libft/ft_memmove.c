@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:52:49 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:55:52 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:48:15 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/* int	main(void)
-{
-	char s[] = "rem ipssum dolor sit a";
-	char d[50] = "CDFG";
-	size_t l = 10;
-
-	printf("%s\n", ft_memmove(d, s, l));
-	printf("%s", memmove(d, s, l));
-	return (0);
-} */

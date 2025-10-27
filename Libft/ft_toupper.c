@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:54:46 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:56 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:49:25 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-/*
-int	main(void)
-{
-	char a = 'h';
-
-	printf("%c \n", ft_toupper(a));
-	printf("%c", toupper(a));
-	return (0); 
-}*/

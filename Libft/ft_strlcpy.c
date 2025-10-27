@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:53:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:36 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:49:02 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-/*int	main(void)
-{
-	char	dst;
-	char	src;
-
-	size_t l
-		printf("")
-}*/

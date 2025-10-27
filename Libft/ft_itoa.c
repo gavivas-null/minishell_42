@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:51:53 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 19:56:33 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:35 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,3 @@ char	*ft_itoa(int n)
 	ft_while(n, len, new);
 	return (new);
 }
-
-// int	main(void)
-// {
-// 	int n = -2147483648;
-// 	char *str = ft_itoa(n);
-// 	ft_putstr_fd(str, 1);
-// 	return (0);
-// }

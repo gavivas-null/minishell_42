@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:52:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:55:42 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:48:04 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-
-/* int	main()
-{
-	int	valor = 42;
-    t_list *node = ft_lstnew(&valor);
-    if (node)
-    {
-		printf("direccion hexa del nodo: %p\n", (void *)node);
-        printf("Contenido del nodo: %d\n", *(int *)(node->content));
-		free(node);
-    }
-    else
-        printf("Error al crear el nodo\n");
-    return 0;
-} */

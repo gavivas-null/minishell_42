@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:53:07 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/06/05 20:13:56 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:27 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ int	ft_isprime(int n)
 	}
 	return (1);
 }
-
-/* int	main(void)
-{
-	ft_printf("1 → %d\n", ft_isprime(1));  // 0
-	ft_printf("2 → %d\n", ft_isprime(2));  // 1
-	ft_printf("3 → %d\n", ft_isprime(3));  // 1
-	ft_printf("4 → %d\n", ft_isprime(4));  // 0
-	ft_printf("17 → %d\n", ft_isprime(17)); // 1
-	ft_printf("18 → %d\n", ft_isprime(18)); // 0
-	ft_printf("29 → %d\n", ft_isprime(29)); // 1
-	ft_printf("49 → %d\n", ft_isprime(49)); // 0 (7×7)
-} */

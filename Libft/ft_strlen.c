@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:53:53 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:56:40 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:49:06 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (a);
 }
-/*
-int	main(void)
-{
-	char	*len;
-
-	len = "Muy buenas a todos Guapisimos";
-
-	printf("%zu \n", ft_strlen(len));
-	printf("%zu", strlen(len));
-	return (0);
-}*/

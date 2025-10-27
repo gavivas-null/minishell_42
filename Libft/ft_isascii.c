@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:51:40 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:55:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:20 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-/*
-
-int	main(void)
-{
-	printf("%d, \n", ft_isascii(' '));
-	printf("%d", isascii(' '));
-	return (0);
-}*/

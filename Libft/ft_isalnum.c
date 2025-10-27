@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:51:33 by gavivas-          #+#    #+#             */
-/*   Updated: 2024/08/19 18:55:08 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:47:16 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*
-int	main()
-{
-	printf("%d, \n", ft_isalnum(' '));
-	printf("%d", isalnum(' '));
-	return (0);
-}*/
