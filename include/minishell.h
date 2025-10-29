@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 21:10:43 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:18:01 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ void	extract_envp(t_mini *mini, char **envp);
 void	env_add(t_envp **lst, t_envp *new);
 t_envp	*env_last(t_envp *lst);
 t_envp	*env_new(char *key, char *value);
+char	*find_variable_key(t_envp *dct, char *key);
 
 #endif

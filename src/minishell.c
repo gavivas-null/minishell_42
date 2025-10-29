@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 21:11:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:18:53 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	start_shell(t_mini *mini)
 			continue ;
 		add_history(line);
 		read_tokens(mini, line);
+		if (find_variable_key(mini->envp, line) == NULL)
+			break ;
 		// TODO: continue parsing and executor
 		free(line);
 	}
@@ -40,6 +42,6 @@ int	main(int argc, char **args, char **envp)
 	(void)argc;
 	(void)args;
 	extract_envp(&mini, envp);
-	//start_shell(&mini);
+	start_shell(&mini);
 	return (0);
 }
