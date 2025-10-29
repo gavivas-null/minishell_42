@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:34:26 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/29 20:23:50 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/29 20:59:04 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,15 @@ t_envp	*find_variable_key(t_envp *dct, char *key)
 	return (NULL);
 }
 
-int	insert_new_variable(t_envp *dct, char *key, char *value)
+t_envp	*add_variable(t_envp **env, char *key, char *value)
 {
-	if (find_variable_key(dct, key) != NULL)
-	{
-		printf("esta variable ya existe: %s=%s\n", key, value);
-		return (EXIT_FAILURE);
-	}
-	return (EXIT_FAILURE);
+	t_envp	*tmp;
+	t_envp	*node;
+
+	if (!key || !*key)
+		return (NULL);
+	if (!ft_isalpha(key[0]) || key[0] != '_')
+		return (NULL);
+	if (!ft_str_isalnum(key))
+		return (NULL);
 }

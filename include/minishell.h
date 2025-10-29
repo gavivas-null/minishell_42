@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/29 20:18:58 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/29 21:01:13 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ t_envp	*env_new(char *key, char *value);
 void	env_add(t_envp **lst, t_envp *new);
 void	extract_envp(t_mini *mini, char **envp);
 t_envp	*find_variable_key(t_envp *dct, char *key);
+t_envp	*add_variable(t_envp **env, char *key, char *value);
+int		ft_str_isalnum(char *str);
 
 #endif
