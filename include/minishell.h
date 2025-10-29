@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/29 18:18:01 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/10/29 20:18:58 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,16 @@ typedef struct s_mini
 void	start_shell(t_mini *mini);
 void	read_tokens(t_mini *mini, char *line);
 
-//------------------------------------UTILS------------------------------------
+//------------------------------------TOKEN------------------------------------
 t_token	*create_token(char *content);
 t_token	*last_token(t_token *lst);
 void	add_token(t_token **lst, t_token *new);
-void	extract_envp(t_mini *mini, char **envp);
-void	env_add(t_envp **lst, t_envp *new);
+
+//------------------------------------ENVP------------------------------------
 t_envp	*env_last(t_envp *lst);
 t_envp	*env_new(char *key, char *value);
-char	*find_variable_key(t_envp *dct, char *key);
+void	env_add(t_envp **lst, t_envp *new);
+void	extract_envp(t_mini *mini, char **envp);
+t_envp	*find_variable_key(t_envp *dct, char *key);
 
 #endif
