@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:34:26 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/02 20:55:23 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/02 21:16:55 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ t_envp	*find_variable_key(t_envp *dct, char *key)
 		cmp = ft_strcmp(tmp->key, key);
 		if (cmp == 0)
 		{
-			printf("%s\n", tmp->value);
 			return (tmp);
 		}
 		tmp = tmp->next;
@@ -56,11 +55,16 @@ t_envp	*add_variable(t_envp **env, char *key, char *value)
 
 void	work_with_env(t_mini *mini, char *line)
 {
+	t_envp	*node;
+
 	if (line[0] == '$')
 	{
 		line++;
-		if (find_variable_key(mini->envp, line) == NULL)
+		node = find_variable_key(mini->envp, line);
+		if (node == NULL)
 			return ;
+		if (node->value)
+			printf("%s\n", node->value);
 	}
 	if (line[0] == '#')
 	{
