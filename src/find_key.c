@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:34:26 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/02 18:38:33 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/02 18:42:47 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,4 @@ t_envp	*add_variable(t_envp **env, char *key, char *value)
 		return (NULL);
 	if (!ft_str_isalnum(key))
 		return (NULL);
-	printf("prueba git.");
 }
