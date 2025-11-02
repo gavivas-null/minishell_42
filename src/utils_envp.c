@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:54:57 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/29 20:02:42 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/02 21:48:54 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,28 @@ static int	find_eq(const char *s)
 t_envp	*env_new(char *key, char *value)
 {
 	t_envp	*new;
+	char	*kdup;
+	char	*vdup;
 
+	new = NULL;
+	kdup = NULL;
+	vdup = NULL;
+	if (!key || !*key)
+		return (NULL);
+	kdup = ft_substr(key, 0, ft_strlen(key));
+	if (!kdup)
+		return (NULL);
+	if (value != NULL)
+	{
+		vdup = ft_substr(value, 0, ft_strlen(value));
+		if (!vdup)
+			return (free(kdup), NULL);
+	}
 	new = malloc(sizeof(t_envp));
 	if (!new)
-		return (NULL);
-	new->key = key;
-	new->value = value;
+		return (free(kdup), free(vdup), NULL);
+	new->key = kdup;
+	new->value = vdup;
 	new->next = NULL;
 	return (new);
 }
