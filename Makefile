@@ -12,6 +12,7 @@ SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/utils_tokens.c \
 		$(SRC_DIR)/utils_envp.c \
 		$(SRC_DIR)/find_key.c \
+		$(SRC_DIR)/utils.c
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
