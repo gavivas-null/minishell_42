@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/02 20:30:50 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/02 20:50:32 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ void	start_shell(t_mini *mini)
 		if (line == NULL)
 			break ;
 		else if (line[0] == '\0')
+		{
+			free(line);
 			continue ;
+		}
 		add_history(line);
 		read_tokens(mini, line);
-		if (work_with_env(mini, line) == EXIT_FAILURE)
-			continue ;
+		work_with_env(mini, line);
 		free(line);
 	}
 }
