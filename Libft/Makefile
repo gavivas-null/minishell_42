@@ -77,7 +77,6 @@ OBJ	=	$(SRCALL:.c=.o)
 CC	 =	cc
 AR = ar
 CFLAGS	=	-Wall -Werror -Wextra
-#CFLAGS += -fsanitize=address
 ARFLAG = -rcs
 NAME =	libft.a
 
