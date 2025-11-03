@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 17:34:26 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/02 21:16:55 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/03 18:36:47 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ t_envp	*add_variable(t_envp **env, char *key, char *value)
 void	work_with_env(t_mini *mini, char *line)
 {
 	t_envp	*node;
+	char	*ckey;
+	char	*cvalue;
+	char	*equal;
 
 	if (line[0] == '$')
 	{
@@ -69,10 +72,10 @@ void	work_with_env(t_mini *mini, char *line)
 	if (line[0] == '#')
 	{
 		line++;
-		if (add_variable(&mini->envp, line, "funcionó") == NULL)
-		{
-			printf("falló:(\n");
+		equal = ft_strchr(line, '=');
+		ckey = ft_substr(line, 0, equal - line);
+		cvalue = ft_substr(equal + 1, 0, ft_strlen(equal + 1));
+		if (add_variable(&mini->envp, ckey, cvalue) == NULL)
 			return ;
-		}
 	}
 }
