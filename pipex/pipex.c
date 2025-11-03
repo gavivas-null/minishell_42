@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:01:53 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:15:44 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:50:57 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	main(int argc, char **args, char **envp)
 	px.status_b = 0;
 	px.err = 0;
 	px.envp = envp;
-	px.outfile = open_outfile_bonus(&px, args[argc - 1]);
+	px.outfile = open_outfile(&px, args[argc - 1]);
 	open_infile(&px, args[1]);
 	if (px.err == 1)
 	{

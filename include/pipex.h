@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 18:17:16 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:33:55 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:50:40 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*find_executable_path(char **paths, char *cmd, int i);
 char	**get_paths_array(char **envp);
 char	*get_path_value(char **envp);
 void	open_infile(t_pipex *px, char *path);
-int		open_outfile_bonus(t_pipex *px, char *path);
+int		open_outfile(t_pipex *px, char *path);
 void	create_pipe(t_pipex *px);
 void	cmd_error(char *cmd, char **split);
 void	exit_with_error(char *msg, char **split, char *to_free, int code);

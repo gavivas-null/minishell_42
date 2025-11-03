@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:05:41 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:29:30 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:50:50 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	open_infile(t_pipex *px, char *path)
 		px->infile = fd;
 }
 
-int	open_outfile_bonus(t_pipex *px, char *path)
+int	open_outfile(t_pipex *px, char *path)
 {
 	int	fd;
 
