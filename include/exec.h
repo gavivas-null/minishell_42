@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   exec.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 18:17:16 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:50:40 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/11/03 20:37:43 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/11/03 20:40:39 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#ifndef EXEC_H
+# define EXEC_H
+
 # include <libft.h>
 # include <stdlib.h>
 # include <string.h>

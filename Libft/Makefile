@@ -1,3 +1,5 @@
+NAME =	libft.a
+
 SRC			=	ft_bzero.c\
 				ft_isalnum.c\
 				ft_isalpha.c\
@@ -78,7 +80,6 @@ CC	 =	cc
 AR = ar
 CFLAGS	=	-Wall -Werror -Wextra
 ARFLAG = -rcs
-NAME =	libft.a
 
 # --------------------------------------------------------------
 # 👇 Regla principal

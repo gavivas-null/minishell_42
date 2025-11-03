@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   exec_errors.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 19:04:38 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:29:19 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/11/03 20:30:49 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/11/03 20:33:34 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <pipex.h>
+#include <minishell.h>
 
 void	exit_with_error(char *msg, char **split, char *to_free, int code)
 {
