@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:04:38 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 19:04:51 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/03 19:29:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	cmd_error(char *cmd, char **split)
 {
 	char	*msg;
 
-	msg = ft_strjoin("pipex_bonus: ", cmd);
+	msg = ft_strjoin("pipex: ", cmd);
 	if (!msg)
 	{
 		if (split)
