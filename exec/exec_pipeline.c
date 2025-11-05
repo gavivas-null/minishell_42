@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:31:26 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:33:06 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:12:07 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 void	exec_last_command(t_pipex *px, char *cmd, int *pid)
 {

@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:31:15 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:35:06 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:12:00 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 void	open_infile(t_pipex *px, char *path)
 {

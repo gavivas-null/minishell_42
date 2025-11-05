@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:30:43 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:31:01 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:11:39 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 void	exec_cmd(char *cmd, char **envp)
 {

@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:31:09 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:32:24 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:11:57 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 void	handle_command(t_pipex *px, char *cmd, int input_fd, int output_fd)
 {

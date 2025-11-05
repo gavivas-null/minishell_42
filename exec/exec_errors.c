@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:30:49 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:33:34 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:11:53 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 void	exit_with_error(char *msg, char **split, char *to_free, int code)
 {

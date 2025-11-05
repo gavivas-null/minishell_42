@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:48:58 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:49:09 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:12:09 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 int	main(int argc, char **args, char **envp)
 {

@@ -6,11 +6,11 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:20:11 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:31:21 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:12:04 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include <exec.h>
 
 char	*get_path_value(char **envp)
 {
