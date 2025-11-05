@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:37:43 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/05 19:09:45 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:40:17 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define EXEC_H
 
 # include <libft.h>
-# include <minishell.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>

@@ -2,8 +2,9 @@ NAME = minishell
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
-INCLUDES = -I include -I Libft
+INCLUDES = -I include -I Libft -I exec
 LIBFT = Libft/libft.a
+EXEC = exec/libexec.a
 
 SRC_DIR = src
 OBJ_DIR = obj
@@ -26,7 +27,8 @@ $(OBJ_DIR):
 
 $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) -lreadline -o $(NAME)
+	@$(MAKE) -C exec > /dev/null
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(EXEC) -lreadline -o $(NAME)
 	@echo "✅ Proyecto compilado correctamente."
 
 # --------------------------------------------------------------
@@ -44,13 +46,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	@rm -rf $(OBJ_DIR) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
+	@$(MAKE) -C exec fclean > /dev/null
 	@echo "🧹 Archivos objeto y temporales eliminados."
 
 fclean: clean
 	@rm -f $(NAME) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
+	@$(MAKE) -C exec fclean > /dev/null
 	@echo "🧼 Todo limpio."
 
 re: fclean all
 
-.PHONY: all clean fclean re libft
+.PHONY: all clean fclean re libft exec
