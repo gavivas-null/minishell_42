@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:31:15 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/05 19:12:00 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/05 20:41:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	open_infile(t_pipex *px, char *path)
 	fd = open(path, O_RDONLY);
 	if (fd == -1)
 	{
-		ft_putstr_fd("pipex: ", 2);
+		ft_putstr_fd("exec: ", 2);
 		perror(path);
 		px->infile = open("/dev/null", O_RDONLY);
 		if (px->infile == -1)
@@ -36,7 +36,7 @@ int	open_outfile(t_pipex *px, char *path)
 	fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd == -1)
 	{
-		ft_putstr_fd("pipex: ", 2);
+		ft_putstr_fd("exec: ", 2);
 		perror(path);
 		px->err = 1;
 	}
