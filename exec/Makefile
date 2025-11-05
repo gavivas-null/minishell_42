@@ -6,12 +6,12 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLUDES = -I ../include
 
-SRCS =	exec/exec_core.c \
-		exec/exec_errors.c \
-		exec/exec_handle.c \
-		exec/exec_io.c \
-		exec/exec_path.c \
-		exec/exec_pipeline.c \
+SRCS =	exec_core.c \
+		exec_errors.c \
+		exec_handle.c \
+		exec_io.c \
+		exec_path.c \
+		exec_pipeline.c \
 
 OBJS = $(SRCS:.c=.o)
 
