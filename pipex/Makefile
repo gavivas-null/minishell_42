@@ -1,18 +1,18 @@
-NAME = libexec.a
+NAME = libpipex.a
 
 AR = ar
 ARFLAG = -rcs
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I ../exec -I ../Libft
+INCLUDES = -I ../pipex -I ../Libft
 
 
-SRCS =	exec_core.c \
-		exec_errors.c \
-		exec_handle.c \
-		exec_io.c \
-		exec_path.c \
-		exec_pipeline.c \
+SRCS =	pipex_core.c \
+		pipex_errors.c \
+		pipex_handle.c \
+		pipex_io.c \
+		pipex_path.c \
+		pipex_pipeline.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -37,11 +37,11 @@ $(NAME): $(OBJS)
 # --------------------------------------------------------------
 clean:
 	@rm -f $(OBJS)
-	@echo "🧹 exec: objetos eliminados."
+	@echo "🧹 pipex: objetos eliminados."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️ exec: lib eliminada."
+	@echo "🗑️ pipex: lib eliminada."
 
 re: fclean all
 

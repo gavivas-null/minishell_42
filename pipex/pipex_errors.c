@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_errors.c                                      :+:      :+:    :+:   */
+/*   pipex_errors.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 20:30:49 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/05 20:41:30 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/12 21:29:42 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <exec.h>
+#include <pipex.h>
 
 void	exit_with_error(char *msg, char **split, char *to_free, int code)
 {

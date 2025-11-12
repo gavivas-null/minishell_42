@@ -2,9 +2,9 @@ NAME = minishell
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
-INCLUDES = -I include -I Libft -I exec
+INCLUDES = -I include -I Libft -I pipex
 LIBFT = Libft/libft.a
-EXEC = exec/libexec.a
+PIPEX = pipex/libpipex.a
 
 OBJ_DIR = obj
 OBJ_UTILS_DIR = obj/utils
@@ -31,8 +31,8 @@ $(OBJ_DIR):
 
 $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null
-	@$(MAKE) -C exec > /dev/null
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(EXEC) -lreadline -o $(NAME)
+	@$(MAKE) -C pipex > /dev/null
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(PIPEX) -lreadline -o $(NAME)
 	@echo "✅ Proyecto compilado correctamente."
 
 # --------------------------------------------------------------
@@ -49,15 +49,15 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	@rm -rf $(OBJ_DIR) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
-	@$(MAKE) -C exec fclean > /dev/null
+	@$(MAKE) -C pipex fclean > /dev/null
 	@echo "🧹 Archivos objeto y temporales eliminados."
 
 fclean: clean
 	@rm -f $(NAME) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
-	@$(MAKE) -C exec fclean > /dev/null
+	@$(MAKE) -C pipex fclean > /dev/null
 	@echo "🧼 Todo limpio."
 
 re: fclean all
 
-.PHONY: all clean fclean re libft exec
+.PHONY: all clean fclean re libft pipex
