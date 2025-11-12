@@ -6,10 +6,10 @@ INCLUDES = -I include -I Libft -I exec
 LIBFT = Libft/libft.a
 EXEC = exec/libexec.a
 
-SRC_DIR = src
 OBJ_DIR = obj
 OBJ_UTILS_DIR = obj/utils
 
+SRC_DIR = src
 SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/parser.c \
 		$(SRC_DIR)/find_key.c \
@@ -41,7 +41,6 @@ $(NAME): $(OBJ)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@ > /dev/null
 	@echo "🔧 Compilado: $<"
-
 
 # --------------------------------------------------------------
 # 🧹 Limpieza
