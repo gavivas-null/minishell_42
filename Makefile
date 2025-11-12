@@ -8,13 +8,15 @@ EXEC = exec/libexec.a
 
 SRC_DIR = src
 OBJ_DIR = obj
+OBJ_UTILS_DIR = obj/utils
+
 SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/parser.c \
-		$(SRC_DIR)/utils_tokens.c \
-		$(SRC_DIR)/utils_envp.c \
-		$(SRC_DIR)/utils_redir.c \
 		$(SRC_DIR)/find_key.c \
-		$(SRC_DIR)/utils.c
+		$(SRC_DIR)/utils/utils_tokens.c \
+		$(SRC_DIR)/utils/utils_envp.c \
+		$(SRC_DIR)/utils/utils_redir.c \
+		$(SRC_DIR)/utils/utils_mini.c
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
@@ -25,6 +27,7 @@ all: $(OBJ_DIR) $(NAME)
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_UTILS_DIR)
 
 $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null
