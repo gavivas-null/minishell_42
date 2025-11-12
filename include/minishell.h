@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/03 20:40:30 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/12 19:04:57 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,22 @@ typedef struct s_mini
 	t_token	*data;
 	t_envp	*envp;
 }	t_mini;
+
+typedef enum e_redir_type
+{
+	R_IN,
+	R_OUT_TRUNC,
+	R_OUT_APPEND,
+	R_HEREDOC
+}	t_redir_type;
+
+typedef struct s_redir
+{
+	t_redir_type	type;
+	char			*file;
+	int				fd;
+	struct s_redir	*next;
+}	t_redir;
 
 //------------------------------------START------------------------------------
 void	start_shell(t_mini *mini);
