@@ -2,7 +2,7 @@
 *.o
 *.out
 *.a
-files.txt
+*.txt
 
 # Ejecutables
 a.out
