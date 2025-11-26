@@ -16,7 +16,8 @@ SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/utils/utils_tokens.c \
 		$(SRC_DIR)/utils/utils_envp.c \
 		$(SRC_DIR)/utils/utils_redir.c \
-		$(SRC_DIR)/utils/utils_mini.c
+		$(SRC_DIR)/utils/utils_mini.c \
+		$(SRC_DIR)/heredoc.c
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
