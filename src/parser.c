@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:11:49 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 18:09:07 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:56:07 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ static char	*ft_copywords(char const *s, int *i)
 
 void	read_tokens(t_mini *mini, char *line)
 {
-	int		i;
-	char	*word;
-	t_token	*token;
+	int				i;
+	char			*word;
+	t_mini_token	*token;
 
 	i = 0;
 	while (line[i])

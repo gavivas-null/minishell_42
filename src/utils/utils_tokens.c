@@ -6,17 +6,17 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 19:56:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/10/27 19:56:20 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:55:30 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <minishell.h>
 
-t_token	*create_token(char *content)
+t_mini_token	*create_token(char *content)
 {
-	t_token	*new;
+	t_mini_token	*new;
 
-	new = malloc(sizeof(t_token));
+	new = malloc(sizeof(t_mini_token));
 	if (!new)
 		return (NULL);
 	new->token = content;
@@ -24,9 +24,9 @@ t_token	*create_token(char *content)
 	return (new);
 }
 
-t_token	*last_token(t_token *lst)
+t_mini_token	*last_token(t_mini_token *lst)
 {
-	t_token	*new;
+	t_mini_token	*new;
 
 	new = lst;
 	while (new != NULL && new->next != NULL)
@@ -34,7 +34,7 @@ t_token	*last_token(t_token *lst)
 	return (new);
 }
 
-void	add_token(t_token **lst, t_token *new)
+void	add_token(t_mini_token **lst, t_mini_token *new)
 {
 	if (new)
 	{
