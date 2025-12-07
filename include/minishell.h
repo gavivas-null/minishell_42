@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/07 20:57:10 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/07 20:59:50 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # include <libft.h>
 # include <pipex.h>
+# include <lexer.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>

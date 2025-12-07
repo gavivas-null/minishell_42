@@ -2,9 +2,10 @@ NAME = minishell
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
-INCLUDES = -I include -I Libft -I pipex
+INCLUDES = -I include -I Libft -I pipex -I Lexer
 LIBFT = Libft/libft.a
 PIPEX = pipex/libpipex.a
+LEXER = Lexer/liblexer.a
 
 OBJ_DIR = obj
 OBJ_UTILS_DIR = obj/utils
@@ -33,7 +34,8 @@ $(OBJ_DIR):
 $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null
 	@$(MAKE) -C pipex > /dev/null
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(PIPEX) -lreadline -o $(NAME)
+	@$(MAKE) -C Lexer > /dev/null
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(PIPEX) $(LEXER) -lreadline -o $(NAME)
 	@echo "✅ Proyecto compilado correctamente."
 
 # --------------------------------------------------------------
@@ -51,14 +53,16 @@ clean:
 	@rm -rf $(OBJ_DIR) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
 	@$(MAKE) -C pipex fclean > /dev/null
+	@$(MAKE) -C Lexer fclean > /dev/null
 	@echo "🧹 Archivos objeto y temporales eliminados."
 
 fclean: clean
 	@rm -f $(NAME) > /dev/null
 	@$(MAKE) -C Libft fclean > /dev/null
 	@$(MAKE) -C pipex fclean > /dev/null
+	@$(MAKE) -C Lexer fclean > /dev/null
 	@echo "🧼 Todo limpio."
 
 re: fclean all
 
-.PHONY: all clean fclean re libft pipex
+.PHONY: all clean fclean re Libft pipex Lexer
