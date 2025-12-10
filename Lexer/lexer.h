@@ -6,19 +6,19 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 13:45:58 by gojeda            #+#    #+#             */
-/*   Updated: 2025/12/01 19:19:33 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 19:47:21 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LEXER_H
 # define LEXER_H
 
+# include <libft.h>
 # include <stddef.h>
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include <libft.h>
 
 # define NORMAL 0
 # define IN_SQUOTE 1

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/11/02 20:50:32 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 19:45:41 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	start_shell(t_mini *mini)
 {
 	char	*line;
 	int		running;
+	t_lexer	*lex;
 
 	running = 1;
 	mini->data = NULL;
@@ -30,9 +31,23 @@ void	start_shell(t_mini *mini)
 			continue ;
 		}
 		add_history(line);
-		read_tokens(mini, line);
-		work_with_env(mini, line);
-		free(line);
+		lex = lexer_tokenize(line);
+		if (!lex)
+		{
+			free(line);
+			continue ;
+		}
+		else if (lex->error)
+		{
+			free(line);
+			lexer_destroy(lex);
+			continue ;
+		}
+		else
+		{
+			lexer_destroy(lex);
+			free(line);
+		}
 	}
 }
 
