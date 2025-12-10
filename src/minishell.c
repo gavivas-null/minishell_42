@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 20:48:11 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 21:22:52 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	start_shell(t_mini *mini)
 		}
 		else
 		{
+			debug_print_tokens(lex);
 			lexer_destroy(lex);
 			free(line);
 		}

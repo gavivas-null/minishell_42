@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 20:47:19 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:55:12 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,8 @@ t_redir			*redir_new(t_rtype type, char *file);
 t_redir			*redir_last(t_redir *lst);
 void			redir_add(t_redir **lst, t_redir *new);
 void			redir_clear(t_redir **lst);
+
+//------------------------------------DEBUG------------------------------------
+void	debug_print_tokens(t_lexer *lex);
 
 #endif
