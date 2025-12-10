@@ -35,7 +35,7 @@ $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null
 	@$(MAKE) -C pipex > /dev/null
 	@$(MAKE) -C Lexer > /dev/null
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(LIBFT) $(PIPEX) $(LEXER) -lreadline -o $(NAME)
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJ) $(PIPEX) $(LEXER) $(LIBFT) -lreadline -o $(NAME)
 	@echo "✅ Proyecto compilado correctamente."
 
 # --------------------------------------------------------------
