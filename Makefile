@@ -12,9 +12,7 @@ OBJ_UTILS_DIR = obj/utils
 
 SRC_DIR = src
 SRC =	$(SRC_DIR)/minishell.c \
-		$(SRC_DIR)/parser.c \
 		$(SRC_DIR)/find_key.c \
-		$(SRC_DIR)/utils/utils_tokens.c \
 		$(SRC_DIR)/utils/utils_envp.c \
 		$(SRC_DIR)/utils/utils_redir.c \
 		$(SRC_DIR)/utils/utils_mini.c \
@@ -51,9 +49,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@rm -rf $(OBJ_DIR) > /dev/null
-	@$(MAKE) -C Libft fclean > /dev/null
-	@$(MAKE) -C pipex fclean > /dev/null
-	@$(MAKE) -C Lexer fclean > /dev/null
+	@$(MAKE) -C Libft clean > /dev/null
+	@$(MAKE) -C pipex clean > /dev/null
+	@$(MAKE) -C Lexer clean > /dev/null
 	@echo "🧹 Archivos objeto y temporales eliminados."
 
 fclean: clean

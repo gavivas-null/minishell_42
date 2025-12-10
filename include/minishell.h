@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/07 20:59:50 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:47:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,6 @@
 
 //------------------------------------STRUCT------------------------------------
 
-typedef struct s_mini_token
-{
-	char				*token;
-	struct s_mini_token	*next;
-}	t_mini_token;
-
 typedef struct s_envp
 {
 	char			*key;
@@ -47,7 +41,6 @@ typedef struct s_envp
 
 typedef struct s_mini
 {
-	t_mini_token	*data;
 	t_envp			*envp;
 }	t_mini;
 
@@ -69,12 +62,6 @@ typedef struct s_redir
 
 //------------------------------------START------------------------------------
 void			start_shell(t_mini *mini);
-void			read_tokens(t_mini *mini, char *line);
-
-//------------------------------------TOKEN------------------------------------
-t_mini_token	*create_token(char *content);
-t_mini_token	*last_token(t_mini_token *lst);
-void			add_token(t_mini_token **lst, t_mini_token *new);
 
 //------------------------------------ENVP------------------------------------
 t_envp			*env_last(t_envp *lst);

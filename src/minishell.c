@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 19:45:41 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 20:48:11 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	start_shell(t_mini *mini)
 	t_lexer	*lex;
 
 	running = 1;
-	mini->data = NULL;
+	mini->envp = NULL;
 	while (running)
 	{
 		line = readline("minishell> ");
