@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 20:55:12 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 21:40:24 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ void			redir_add(t_redir **lst, t_redir *new);
 void			redir_clear(t_redir **lst);
 
 //------------------------------------DEBUG------------------------------------
-void	debug_print_tokens(t_lexer *lex);
+void			debug_print_tokens(t_lexer *lex);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 20:54:01 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 21:22:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/10 21:48:03 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	debug_print_tokens(t_lexer *lex)
 {
-	t_token	*tok;
-    int		index;
+	t_token			*tok;
+	t_segment		*seg;
+	int				index;
 
 	index = 0;
 	if (!lex)
@@ -24,7 +25,17 @@ void	debug_print_tokens(t_lexer *lex)
 	while (tok != NULL)
 	{
 		if (tok->type == TOKEN_WORD)
+		{
 			printf("[%i] TOKEN_WORD\n", index);
+			if (tok->value)
+				printf("	value: %s\n", tok->value);
+			seg = tok->segments;
+			while (seg != NULL)
+			{
+				printf("segment: %s, %i\n", seg->str, seg->expand);
+				seg = seg->next;
+			}
+		}
 		else if (tok->type == TOKEN_PIPE)
 			printf("[%i] TOKEN_PIPE\n", index);
 		else if (tok->type == TOKEN_REDIR_IN)
@@ -41,5 +52,5 @@ void	debug_print_tokens(t_lexer *lex)
 			printf("[%i] TOKEN_ERROR\n", index);
 		tok = tok->next;
 		index++;
-    }
+	}
 }
