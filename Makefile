@@ -16,6 +16,7 @@ SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/utils/utils_envp.c \
 		$(SRC_DIR)/utils/utils_redir.c \
 		$(SRC_DIR)/utils/utils_mini.c \
+		$(SRC_DIR)/utils/utils_cmd.c \
 		$(SRC_DIR)/heredoc.c \
 		$(SRC_DIR)/debug.c
 

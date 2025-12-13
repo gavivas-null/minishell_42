@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 21:40:24 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/13 01:01:31 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,13 @@ typedef struct s_redir
 	struct s_redir	*next;
 }	t_redir;
 
+typedef struct s_cmd
+{
+	char			**argv;
+	t_redir			*redir;
+	struct s_cmd	*next;
+}	t_cmd;
+
 //------------------------------------START------------------------------------
 void			start_shell(t_mini *mini);
 
@@ -81,5 +88,12 @@ void			redir_clear(t_redir **lst);
 
 //------------------------------------DEBUG------------------------------------
 void			debug_print_tokens(t_lexer *lex);
+
+//-------------------------------------CMD-------------------------------------
+t_cmd			*cmd_new(void);
+int				cmd_add_arg(t_cmd *cmd, char *word);
+int				cmd_add_redir(t_cmd *cmd, t_rtype type, char *file);
+void			cmd_clear(t_cmd *cmd);
+
 
 #endif
