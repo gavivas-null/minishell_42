@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/13 01:01:31 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/13 01:45:05 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,15 @@ t_redir			*redir_last(t_redir *lst);
 void			redir_add(t_redir **lst, t_redir *new);
 void			redir_clear(t_redir **lst);
 
-//------------------------------------DEBUG------------------------------------
-void			debug_print_tokens(t_lexer *lex);
-
 //-------------------------------------CMD-------------------------------------
 t_cmd			*cmd_new(void);
 int				cmd_add_arg(t_cmd *cmd, char *word);
 int				cmd_add_redir(t_cmd *cmd, t_rtype type, char *file);
 void			cmd_clear(t_cmd *cmd);
 
+//------------------------------------DEBUG------------------------------------
+void			debug_print_tokens(t_lexer *lex);
+void			debug_print_cmd(t_cmd *cmd);
+int				debug_build_cmd_from_tokens(t_lexer *lex);
 
 #endif

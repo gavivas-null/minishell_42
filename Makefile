@@ -9,6 +9,7 @@ LEXER = Lexer/liblexer.a
 
 OBJ_DIR = obj
 OBJ_UTILS_DIR = obj/utils
+OBJ_DEBUG_DIR = obj/debug
 
 SRC_DIR = src
 SRC =	$(SRC_DIR)/minishell.c \
@@ -18,7 +19,8 @@ SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/utils/utils_mini.c \
 		$(SRC_DIR)/utils/utils_cmd.c \
 		$(SRC_DIR)/heredoc.c \
-		$(SRC_DIR)/debug.c
+		$(SRC_DIR)/debug/debug_tokens.c \
+		$(SRC_DIR)/debug/debug_cmd.c
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
@@ -30,6 +32,7 @@ all: $(OBJ_DIR) $(NAME)
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 	@mkdir -p $(OBJ_UTILS_DIR)
+	@mkdir -p $(OBJ_DEBUG_DIR)
 
 $(NAME): $(OBJ)
 	@$(MAKE) -C Libft > /dev/null

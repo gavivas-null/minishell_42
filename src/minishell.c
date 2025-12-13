@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/10 21:22:52 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/12/13 01:31:48 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	start_shell(t_mini *mini)
 		line = readline("minishell> ");
 		if (line == NULL)
 			break ;
-		else if (line[0] == '\0')
+		if (line[0] == '\0')
 		{
 			free(line);
 			continue ;
@@ -37,18 +37,21 @@ void	start_shell(t_mini *mini)
 			free(line);
 			continue ;
 		}
-		else if (lex->error)
+		if (lex->error)
 		{
-			free(line);
 			lexer_destroy(lex);
+			free(line);
 			continue ;
 		}
-		else
+		if (debug_build_cmd_from_tokens(lex) == 1)
 		{
-			debug_print_tokens(lex);
 			lexer_destroy(lex);
 			free(line);
+			continue ;
 		}
+		debug_print_tokens(lex);
+		lexer_destroy(lex);
+		free(line);
 	}
 }
 
