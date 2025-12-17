@@ -20,7 +20,8 @@ SRC =	$(SRC_DIR)/minishell.c \
 		$(SRC_DIR)/utils/utils_cmd.c \
 		$(SRC_DIR)/heredoc.c \
 		$(SRC_DIR)/debug/debug_tokens.c \
-		$(SRC_DIR)/debug/debug_cmd.c
+		$(SRC_DIR)/debug/debug_cmd.c \
+		$(SRC_DIR)/parser.c
 
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
