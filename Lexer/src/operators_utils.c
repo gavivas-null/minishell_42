@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   operators_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gojeda <gojeda@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 15:47:32 by gojeda            #+#    #+#             */
-/*   Updated: 2025/12/01 19:13:59 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/11/30 15:47:36 by gojeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <lexer.h>
+#include "../includes/lexer.h"
 
 // Identificamos si estamos en uno de los operadores
 int	is_operator_char(char c)

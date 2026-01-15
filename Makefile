@@ -2,10 +2,10 @@ NAME = minishell
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra 
-INCLUDES = -I include -I Libft -I pipex -I Lexer
+INCLUDES = -I include -I Libft -I pipex -I Lexer/includes
 LIBFT = Libft/libft.a
 PIPEX = pipex/libpipex.a
-LEXER = Lexer/liblexer.a
+LEXER = Lexer/lexer.a
 
 OBJ_DIR = obj
 OBJ_UTILS_DIR = obj/utils

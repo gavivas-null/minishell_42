@@ -75,6 +75,7 @@ SRCETC		= 	ft_free_split.c \
 				ft_swap_ptr.c \
 				ft_strndup.c \
 				ft_realloc.c \
+				ft_strjoin_char.c
 
 SRCALL	=	$(SRC) $(SRCBONUS) $(SRCPRINTF) $(SRCGNL) $(SRCETC)
 OBJ	=	$(SRCALL:.c=.o)

@@ -6,13 +6,13 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 17:41:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/17 18:30:51 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:21:15 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <minishell.h>
 
-static t_rtype	get_redir_type(t_token_type type)
+/* static t_rtype	get_redir_type(t_token_type type)
 {
 	if (type == TOKEN_REDIR_IN)
 		return (R_IN);
@@ -23,9 +23,9 @@ static t_rtype	get_redir_type(t_token_type type)
 	if (type == TOKEN_HEREDOC)
 		return (R_HEREDOC);
 	return (-1);
-}
+} */
 
-t_cmd   *parse_tokens(t_lexer *lex)
+t_cmd	*parse_tokens(t_lexer *lex)
 {
     t_token *tok;
     t_cmd   *cmd;
@@ -40,7 +40,7 @@ t_cmd   *parse_tokens(t_lexer *lex)
     {
         if (tok->type == TOKEN_WORD && tok->value)
             cmd_add_arg(cmd, tok->value);
-		else if (tok->type == TOKEN_PIPE)
+/* 		else if (tok->type == TOKEN_PIPE)
 
         else if (tok->type == TOKEN_REDIR_IN)
 
@@ -53,7 +53,7 @@ t_cmd   *parse_tokens(t_lexer *lex)
         else if (tok->type == TOKEN_EOF)
 
         else if (tok->type == TOKEN_ERROR)
-
+ */
         tok = tok->next;
     }
     return (cmd);

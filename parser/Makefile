@@ -1,4 +1,4 @@
-NAME = lexer.a
+NAME = parser.a
 
 AR = ar
 ARFLAG = -rcs
@@ -6,15 +6,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 INCLUDES = -I include -I ../Libft
 
-SRCS =	src/crud.c \
-		src/free.c \
-		src/operators_utils.c \
-		src/segments_utils.c \
-		src/words_utils.c \
-		src/states/handle_dquote_state.c \
-		src/states/handle_squote_state.c \
-		src/states/handle_normal_state.c \
-		src/states/state_machine.c
+SRCS = 
 
 OBJS = $(SRCS:.c=.o)
 
@@ -39,11 +31,11 @@ $(NAME): $(OBJS)
 # --------------------------------------------------------------
 clean:
 	@rm -f $(OBJS)
-	@echo "🧹 lexer: objetos eliminados."
+	@echo "🧹 parser: objetos eliminados."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️ lexer: lib eliminada."
+	@echo "🗑️ parser: lib eliminada."
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:57:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/07 19:59:35 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:20:07 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,6 @@ void		ft_swap_int(int *a, int *b);
 void		ft_swap_ptr(void **a, void **b);
 char		*ft_strndup(const char *s, size_t n);
 void		*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+char		*ft_strjoin_char(char *s, char c);
 
 #endif

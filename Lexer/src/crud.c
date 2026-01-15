@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   crud.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gojeda <gojeda@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 14:47:36 by gojeda            #+#    #+#             */
-/*   Updated: 2025/12/01 19:13:52 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/07 04:01:03 by gojeda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <lexer.h>
+#include "../includes/lexer.h"
 
 // Creamos el lexer vacio
 t_lexer	*lexer_create(void)
@@ -23,8 +23,9 @@ t_lexer	*lexer_create(void)
 	lex->head = NULL;
 	lex->tail = NULL;
 	lex->error = 0;
-	lex->word = NULL;
-	lex->word_len = 0;
+	lex->current_word = NULL;
+	lex->current_seg = NULL;
+	lex->current_expand = true;
 	return (lex);
 }
 
