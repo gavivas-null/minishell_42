@@ -1,6 +1,6 @@
 NAME = minishell
 
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra 
 INCLUDES = -I include -I Libft -I pipex -I Lexer/includes
 LIBFT = Libft/libft.a

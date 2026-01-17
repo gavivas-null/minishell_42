@@ -1,49 +1,54 @@
 NAME = lexer.a
 
-AR = ar
-ARFLAG = -rcs
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
-INCLUDES = -I include -I ../Libft
+AR = ar rcs
+CFLAGS = -Wall -Werror -Wextra -g
 
-SRCS =	src/crud.c \
-		src/free.c \
-		src/operators_utils.c \
-		src/segments_utils.c \
-		src/words_utils.c \
-		src/states/handle_dquote_state.c \
-		src/states/handle_squote_state.c \
-		src/states/handle_normal_state.c \
-		src/states/state_machine.c
+SRCS = src/crud.c \
+       src/free.c \
+       src/operators_utils.c \
+       src/segments_utils.c \
+       src/words_utils.c \
+       src/states/handle_dquote_state.c \
+       src/states/handle_squote_state.c \
+       src/states/handle_normal_state.c \
+       src/states/state_machine.c
 
 OBJS = $(SRCS:.c=.o)
 
-# --------------------------------------------------------------
-# 👇 Regla principal
-# --------------------------------------------------------------
+INCLUDES = -I include -I libft
+LIBFT = ../libft/libft.a
+
+#-----------------------------------------------------------
+# Principal
+#-----------------------------------------------------------
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(AR) $(ARFLAG) $(NAME) $(OBJS)
-	@echo "📦 Librería creada: $(NAME)"
+	@$(MAKE) -C ../libft > /dev/null
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "📦 Librería $(NAME) creada correctamente."
 
-# --------------------------------------------------------------
-# 🛠 Compilar cada archivo fuente
-# --------------------------------------------------------------
+#-----------------------------------------------------------
+# Compilar archivos fuente
+#-----------------------------------------------------------
 %.o: %.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 	@echo "🔧 Compilado: $<"
 
-# --------------------------------------------------------------
-# 🧹 Limpieza
-# --------------------------------------------------------------
+#-----------------------------------------------------------
+# Limpiar archivos
+#-----------------------------------------------------------
 clean:
 	@rm -f $(OBJS)
-	@echo "🧹 lexer: objetos eliminados."
+	@$(MAKE) -C ../libft clean > /dev/null
+	@echo "🧹 Archivos objeto eliminados."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️ lexer: lib eliminada."
+	@$(MAKE) -C ../libft fclean > /dev/null
+	@echo "🧼 Todo limpio."
 
 re: fclean all
 

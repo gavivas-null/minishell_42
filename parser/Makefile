@@ -1,41 +1,50 @@
 NAME = parser.a
 
-AR = ar
-ARFLAG = -rcs
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
-INCLUDES = -I include -I ../Libft
+AR = ar rcs
+CFLAGS = -Wall -Werror -Wextra -g
 
-SRCS = 
+SRCS = src/cmd_utils.c \
+		src/free.c \
+		src/handlers.c \
+		src/parser_utils.c \
+		src/parser.c
 
 OBJS = $(SRCS:.c=.o)
 
-# --------------------------------------------------------------
-# 👇 Regla principal
-# --------------------------------------------------------------
+INCLUDES = -I include -I libft
+LIBFT = ../libft/libft.a
+
+#-----------------------------------------------------------
+# Principal
+#-----------------------------------------------------------
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(AR) $(ARFLAG) $(NAME) $(OBJS)
-	@echo "📦 Librería creada: $(NAME)"
+	@$(MAKE) -C ../libft > /dev/null
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "📦 Librería $(NAME) creada correctamente."
 
-# --------------------------------------------------------------
-# 🛠 Compilar cada archivo fuente
-# --------------------------------------------------------------
+#-----------------------------------------------------------
+# Compilar archivos fuente
+#-----------------------------------------------------------
 %.o: %.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 	@echo "🔧 Compilado: $<"
 
-# --------------------------------------------------------------
-# 🧹 Limpieza
-# --------------------------------------------------------------
+#-----------------------------------------------------------
+# Limpiar archivos
+#-----------------------------------------------------------
 clean:
 	@rm -f $(OBJS)
-	@echo "🧹 parser: objetos eliminados."
+	@$(MAKE) -C ../libft clean > /dev/null
+	@echo "🧹 Archivos objeto eliminados."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️ parser: lib eliminada."
+	@$(MAKE) -C ../libft fclean > /dev/null
+	@echo "🧼 Todo limpio."
 
 re: fclean all
 

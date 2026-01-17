@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 13:45:58 by gojeda            #+#    #+#             */
-/*   Updated: 2026/01/15 16:16:42 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:42:06 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include <libft.h>
-# include "../include/token.h"
+# include "../../Libft/libft.h"
+# include "../../include/token.h"
 # define NORMAL 0
 # define IN_SQUOTE 1
 # define IN_DQUOTE 2
