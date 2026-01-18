@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 01:24:37 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/12/13 01:45:15 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/18 19:18:47 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,27 +64,62 @@ static t_rtype	get_redir_type(t_token_type type)
 	return (-1);
 }
 
+static char	*debug_word_to_str(t_token *tok)
+{
+	t_segment	*seg;
+	char		*res;
+	char		*tmp;
+
+	if (!tok || tok->type != TOKEN_WORD)
+		return (NULL);
+	res = ft_strdup("");
+	if (!res)
+		return (NULL);
+	seg = tok->segments;
+	while (seg)
+	{
+		tmp = ft_strjoin(res, seg->str);
+		free(res);
+		if (!tmp)
+			return (NULL);
+		res = tmp;
+		seg = seg->next;
+	}
+	return (res);
+}
+
 int	debug_build_cmd_from_tokens(t_lexer *lex)
 {
 	t_token	*tok;
 	t_cmd	*cmd;
 	t_rtype	type;
+	char	*word;
 
 	if (!lex || !lex->head)
 		return (0);
 	tok = lex->head;
-	if (tok->type != TOKEN_WORD || !tok->value)
+	if (tok->type != TOKEN_WORD)
 		return (0);
-	if (ft_strcmp(tok->value, "debug") != 0)
+	word = debug_word_to_str(tok);
+	if (!word)
 		return (0);
+	if (ft_strcmp(word, "debug") != 0)
+		return (free(word), 0);
+	free(word);
 	cmd = cmd_new();
 	if (!cmd)
 		return (1);
 	tok = tok->next;
 	while (tok && tok->type != TOKEN_EOF)
 	{
-		if (tok->type == TOKEN_WORD && tok->value)
-			cmd_add_arg(cmd, tok->value);
+		if (tok->type == TOKEN_WORD)
+		{
+			word = debug_word_to_str(tok);
+			if (!word)
+				return (cmd_clear(cmd), 1);
+			cmd_add_arg(cmd, word);
+			free(word);
+		}
 		else if (tok->type == TOKEN_REDIR_IN
 			|| tok->type == TOKEN_REDIR_OUT
 			|| tok->type == TOKEN_APPEND
@@ -92,13 +127,16 @@ int	debug_build_cmd_from_tokens(t_lexer *lex)
 		{
 			type = get_redir_type(tok->type);
 			tok = tok->next;
-			if (tok && tok->type == TOKEN_WORD && tok->value)
-				cmd_add_redir(cmd, type, tok->value);
+			if (tok && tok->type == TOKEN_WORD)
+			{
+				word = debug_word_to_str(tok);
+				if (!word)
+					return (cmd_clear(cmd), 1);
+				cmd_add_redir(cmd, type, word);
+				free(word);
+			}
 			else
 				printf("debug: redirection without target\n");
-			if (tok)
-				tok = tok->next;
-			continue ;
 		}
 		tok = tok->next;
 	}

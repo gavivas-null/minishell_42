@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 17:41:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2026/01/17 13:43:27 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/18 19:26:42 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,34 +27,34 @@
 
 t_cmd	*parse_tokens(t_lexer *lex)
 {
-    t_token *tok;
-    t_cmd   *cmd;
+	t_token	*tok;
+	t_cmd	*cmd;
 
-    if (!lex || !lex->head)
-        return (NULL);
-    cmd = cmd_new();
-    if (!cmd)
-        return (NULL);
-    tok = lex->head;
-    while (tok && tok->type != TOKEN_EOF)
-    {
-        if (tok->type == TOKEN_WORD && tok->value)
-            cmd_add_arg(cmd, tok->value);
+	if (!lex || !lex->head)
+		return (NULL);
+	cmd = cmd_new();
+	if (!cmd)
+		return (NULL);
+	tok = lex->head;
+	while (tok && tok->type != TOKEN_EOF)
+	{
+		if (tok->type == TOKEN_WORD && tok->value)
+			cmd_add_arg(cmd, tok->value);
 /* 		else if (tok->type == TOKEN_PIPE)
 
-        else if (tok->type == TOKEN_REDIR_IN)
+		else if (tok->type == TOKEN_REDIR_IN)
 
-        else if (tok->type == TOKEN_REDIR_OUT)
+		else if (tok->type == TOKEN_REDIR_OUT)
 
-        else if (tok->type == TOKEN_HEREDOC)
+		else if (tok->type == TOKEN_HEREDOC)
 
-        else if (tok->type == TOKEN_APPEND)
+		else if (tok->type == TOKEN_APPEND)
 
-        else if (tok->type == TOKEN_EOF)
+		else if (tok->type == TOKEN_EOF)
 
-        else if (tok->type == TOKEN_ERROR)
- */
-        tok = tok->next;
-    }
-    return (cmd);
+		else if (tok->type == TOKEN_ERROR)
+*/
+		tok = tok->next;
+	}
+	return (cmd);
 }

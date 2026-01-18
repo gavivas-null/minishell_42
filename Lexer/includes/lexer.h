@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 13:45:58 by gojeda            #+#    #+#             */
-/*   Updated: 2026/01/17 13:42:06 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/18 18:27:42 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,5 @@ void			lexer_add_char(t_lexer *lx, char c);
 void			lexer_end_segment(t_lexer *lx);
 void			lexer_start_segment(t_lexer *lx, bool expand);
 bool			lexer_end_word(t_lexer *lx);
+
 #endif

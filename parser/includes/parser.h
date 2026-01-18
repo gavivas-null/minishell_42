@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gojeda <gojeda@student.42madrid.com>       +#+  +:+       +#+        */
+/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:21:58 by gojeda            #+#    #+#             */
-/*   Updated: 2026/01/16 08:53:38 by gojeda           ###   ########.fr       */
+/*   Updated: 2026/01/18 18:30:21 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include "../../libft/libft.h"
-# include "../../token.h"
+# include "../../Libft/libft.h"
+# include "../../include/token.h"
 
 typedef enum e_redir_type
 {
