@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:46:19 by gavivas-          #+#    #+#             */
-/*   Updated: 2026/01/18 20:30:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2026/01/18 21:23:50 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 void	start_shell(t_mini *mini)
 {
-	char	*line;
-	int		running;
-	t_lexer	*lex;
+	char		*line;
+	char		*tmp;
+	int			running;
+	t_lexer		*lex;
+	t_pipeline	*p;
 
 	running = 1;
-	mini->envp = NULL;
+	(void)mini;
 	while (running)
 	{
 		line = readline("minishell> ");
 		if (line == NULL)
 			break ;
-		if (line[0] == '\0')
+		tmp = line;
+		while (*tmp == ' ' || *tmp == '\t')
+			tmp++;
+		if (*tmp == '\0')
 		{
 			free(line);
 			continue ;
 		}
-		add_history(line);
-		lex = lexer_tokenize(line);
+		add_history(tmp);
+		lex = lexer_tokenize(tmp);
 		if (!lex)
 		{
 			free(line);
@@ -42,6 +47,14 @@ void	start_shell(t_mini *mini)
 			lexer_destroy(lex);
 			free(line);
 			continue ;
+		}
+		p = parse_tokens(lex->head);
+		if (!p)
+			printf("syntax error\n");
+		else
+		{
+			debug_print_pipeline(p);
+			free_pipeline(p);
 		}
 		lexer_destroy(lex);
 		free(line);
